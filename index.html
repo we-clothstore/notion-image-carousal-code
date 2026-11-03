@@ -44,22 +44,12 @@ body{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    width:34px;
-    height:34px;
-    border:1px solid #111;
-    border-radius:50%;
-    background:white;
+    border:none;
+    background:none;
     color:#111;
     cursor:pointer;
-    font-size:18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:none;
-}
-
-.arrow:hover{
-    transform:translateY(-50%) scale(1.08);
+    font-size:32px;
+    padding:0;
 }
 
 .left{
@@ -99,12 +89,12 @@ body{
 
     <div class="image-container">
 
-        <button class="arrow left" onclick="prevImage()">❮</button>
+        <button class="arrow left" onclick="prevImage()">‹</button>
 
         <img id="productImage"
 src="Brown Halter Vest with Four Buttons.png">
 
-        <button class="arrow right" onclick="nextImage()">❯</button>
+        <button class="arrow right" onclick="nextImage()">›</button>
 
     </div>
 
