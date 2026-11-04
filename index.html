@@ -44,12 +44,14 @@ body{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    font-size:42px;
-    color:#111;
     cursor:pointer;
     user-select:none;
-    line-height:1;
-    font-weight:300;
+    opacity:0.9;
+    transition:opacity 0.2s ease;
+}
+
+.arrow:hover{
+    opacity:0.5;
 }
 
 .left{
@@ -58,10 +60,6 @@ body{
 
 .right{
     right:20px;
-}
-
-.arrow:hover{
-    opacity:0.6;
 }
 
 </style>
@@ -73,12 +71,30 @@ body{
 
     <div class="image-container">
 
-        <span class="arrow left" onclick="prevImage()">←</span>
+        <span class="arrow left" onclick="prevImage()">
+            <svg width="28" height="28" viewBox="0 0 24 24">
+                <path d="M15 4 L7 12 L15 20"
+                      stroke="#111"
+                      stroke-width="2.5"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+        </span>
 
         <img id="productImage"
              src="Brown Halter Vest with Four Buttons.png">
 
-        <span class="arrow right" onclick="nextImage()">→</span>
+        <span class="arrow right" onclick="nextImage()">
+            <svg width="28" height="28" viewBox="0 0 24 24">
+                <path d="M9 4 L17 12 L9 20"
+                      stroke="#111"
+                      stroke-width="2.5"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+        </span>
 
     </div>
 
