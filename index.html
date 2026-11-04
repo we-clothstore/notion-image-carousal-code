@@ -44,15 +44,11 @@ body{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    border:none;
-    background:transparent;
-    width:auto;
-    height:auto;
-    padding:0;
-    color:#111;
     font-size:42px;
+    color:#111;
     cursor:pointer;
-    box-shadow:none;
+    user-select:none;
+    line-height:1;
 }
 
 .left{
@@ -63,26 +59,6 @@ body{
     right:20px;
 }
 
-.details{
-    margin-top:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-}
-
-.description{
-    max-width:75%;
-    color:#444;
-    line-height:1.6;
-}
-
-.price{
-    font-size:22px;
-    font-weight:bold;
-}
-
-
-
 </style>
 </head>
 
@@ -92,16 +68,15 @@ body{
 
     <div class="image-container">
 
-        <button class="arrow left" onclick="prevImage()">LEFT</button>
+        <span class="arrow left" onclick="prevImage()">‹</span>
 
         <img id="productImage"
-src="Brown Halter Vest with Four Buttons.png">
+        src="Brown Halter Vest with Four Buttons.png">
 
-        <button class="arrow right" onclick="nextImage()">RIGHT</button>
+        <span class="arrow right" onclick="nextImage()">›</span>
 
     </div>
 
-    
 </div>
 
 <script>
@@ -110,11 +85,11 @@ const images = [
 "Brown Halter Vest with Four Buttons.png",
 "Brown Halter Vest Back Detail.png"
 ];
+
 let current = 0;
 
 function updateImage(){
     document.getElementById("productImage").src = images[current];
-    
 }
 
 function nextImage(){
